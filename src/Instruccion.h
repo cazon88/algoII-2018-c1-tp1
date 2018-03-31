@@ -39,8 +39,12 @@ public:
 
         // Precondición: la operación es READ, WRITE, JUMP o JUMPZ
 	Id nombre() const;
+
 private:
-	// COMPLETAR
+	Operacion _operacion;
+	int _valor;
+	Id _nombre;
+
 };
 
 #endif /*__INSTRUCCION_H__*/

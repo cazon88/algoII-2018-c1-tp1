@@ -1,0 +1,13 @@
+/home/power/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/power/algoII/tp1
+-- Configuring done
+CMake Error at CMakeLists.txt:15 (add_executable):
+  Cannot find source file:
+
+    tests/main.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .m .M .mm .h .hh .h++ .hm .hpp
+  .hxx .in .txx
+
+
+-- Generating done
+-- Build files have been written to: /home/power/algoII/tp1/cmake-build-debug

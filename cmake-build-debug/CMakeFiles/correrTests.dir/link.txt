@@ -1,0 +1,1 @@
+/usr/bin/c++  -g     -o correrTests tests/google-test/libgtest.a tests/google-test/libgtest_main.a tests/google-test/libgtest.a -lpthread 
