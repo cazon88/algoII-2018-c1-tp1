@@ -14,4 +14,9 @@ const Operacion JUMPZ = 8;
 
 typedef std::string Id;
 
+struct variable{
+    Id nombre;
+    int valor;
+};
+
 #endif /*__UTILES_H__*/

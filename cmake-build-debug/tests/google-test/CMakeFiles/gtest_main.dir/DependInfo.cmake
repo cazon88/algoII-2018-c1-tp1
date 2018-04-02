@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/jazmin/Desktop/algoII-2018-c1-tp1/tests/google-test/src/gtest_main.cc" "/Users/jazmin/Desktop/algoII-2018-c1-tp1/cmake-build-debug/tests/google-test/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+  "/home/power/algoII/tp1/tests/google-test/src/gtest_main.cc" "/home/power/algoII/tp1/cmake-build-debug/tests/google-test/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
@@ -16,7 +16,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/jazmin/Desktop/algoII-2018-c1-tp1/cmake-build-debug/tests/google-test/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/power/algoII/tp1/cmake-build-debug/tests/google-test/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

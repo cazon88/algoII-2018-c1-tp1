@@ -21,13 +21,9 @@ int valorVariable(Id idVariable) const;
 
 
 private:
-
-struct programa {
-    Id nombre;
-    vector<rutinas> programa;
-};
-
-
+    Programa _programa;
+    vector<variable> _memoria;
+    stack<int> _pila;
 };
 
 

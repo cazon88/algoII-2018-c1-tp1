@@ -5,46 +5,71 @@
 #include "Programa.h"
 
 Progama::Programa(){
+    _rutinas = vector<rutina>(); // DUDA: creamos bien el vector vacio?
 }
 
 
 void Programa::agregarInstruccion(Id idRutina, Instruccion instruccion) {
-    for (i=0; i<instrucciones.size(); i++){  //acá no tengo claros los objetos.
-        idRutina.pushback(instruccion);
-        if (esRutinaExistente(idRutina) == false){
-            rutinas.nombre = idRutina;
+
+    if (!esRutinaExistente(idRutina)){
+        //creo rutina
+        rutina r;
+        r.nombre = idRutina;
+        r.instrucciones = vector<instruccion>();
+        r.instrucciones.pushback(instruccion);
+        //Se agegra a _rutinas
+        _rutinas.pushback(r);
+    }else{
+        //Si existe, se busca la rutnia y se agrega la instruccion
+        bool encontrado = false;
+        int i = 0;
+
+        while(i< _rutinas.size() and !encontrado)
+        {
+            if(_rutinas[i].nombre == idRutina){
+                encontrado = true;
+                _rutinas[i].instrucciones.pushback(instruccion);
+            }
+
+            i++;
         }
     }
 
-} //Esto creo que va al revés.
+
+}
 
 
 bool Programa::esRutinaExistente(Id idRutina) const {
-    for (i=0; i<rutina.size(); i++){
-        if (rutina[i] == _rutina[i]){
-            existeRutina = true;
-        } else {
-            existeRutina = false;
-        }
 
+    bool existeRutina = false;
+
+    for (i=0; i< _rutinas.size(); i++){
+        if (_rutinas[i].nombre == idRutina){
+            existeRutina = true;
+        }
     }
+
+    return existeRutina;
 
 }
 
 Instruccion Programa::instruccion(Id idRutina, int i) const {
-        if (i>=0 and i<idRutina.size() and esRutinaExistente(idRutina) == true){
-            return idRutina[i];
+    for(j=0; j<_rutinas.size(); j++){
+        if(_rutinas[j].nombre == idRutina){
+            return _rutinas[j].instrucciones[i];
         }
-
-
+    }
 }
 
 
 int Programa::longitud(Id idRutina) const {
-    if (esRutinaExistente() == true) {
-        return idRutina.size();
+    for(i=0; i<_rutinas.size(); i++){
+        if(_rutinas[i].nombre == idRutina){
+            return _rutinas[i].instrucciones.size();
+        }
     }
 }
+
 
 
 

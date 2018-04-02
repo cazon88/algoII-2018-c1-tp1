@@ -59,10 +59,12 @@ public:
 	Instruccion instruccion(Id idRutina, int i) const;
 
 private:
-	struct rutinas {
+	struct rutina {
 		Id nombre;
 		vector<Instruccion> instrucciones; //cada rutina tiene un nombre y una secuencia de instrucciones.
 	};
+
+	vector<rutina> _rutinas; // El programa tiene 1 o varias rutinas.
 
 };
 
