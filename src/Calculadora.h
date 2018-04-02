@@ -20,6 +20,14 @@ void ejecutar(Id idRutina);
 int valorVariable(Id idVariable) const;
 
 
+private:
+
+struct programa {
+    Id nombre;
+    vector<rutinas> programa;
+};
+
+
 };
 
 

@@ -31,6 +31,7 @@
 //       push(30)
 //       write(x)
 
+
 class Programa {
 public:
 	// Inicialmente no hay ninguna rutina.
@@ -40,6 +41,7 @@ public:
 	// Si la rutina indicada no existe, crea una nueva rutina
 	// con dicho nombre.
 	void agregarInstruccion(Id idRutina, Instruccion instruccion);
+
 
 	// Devuelve True si idRutina representa una rutina existente.
 	bool esRutinaExistente(Id idRutina) const;
@@ -55,8 +57,13 @@ public:
 	// Precondición:
 	//   esRutinaExistente(idRutina) && 0 <= i && i < longitud(idRutina)
 	Instruccion instruccion(Id idRutina, int i) const;
+
 private:
-	// COMPLETAR
+	struct rutinas {
+		Id nombre;
+		vector<Instruccion> instrucciones; //cada rutina tiene un nombre y una secuencia de instrucciones.
+	};
+
 };
 
 #endif /*__PROGRAMA_H__*/

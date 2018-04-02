@@ -23,7 +23,7 @@
 //
 class Instruccion {
 public:
-	// Precondición: la operación es PUSH
+	     // Precondición: la operación es PUSH
 	Instruccion(Operacion operacion, int valor);
 
         // Precondición: la operación es ADD, SUB o MUL

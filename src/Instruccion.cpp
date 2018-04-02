@@ -2,37 +2,32 @@
 
 
 Instruccion::Instruccion(Operacion operacion, int valor) {
-
-	//TODO
+	_operacion = operacion;
+	_valor = valor;
 }
 
 Instruccion::Instruccion(Operacion operacion) {
-	Instruccion O;
-	return O;
-	//TODO
+	_operacion = operacion;
 }
 
 Instruccion::Instruccion(Operacion operacion, Id nombre) {
-	Instruccion i;
-	return i;
-	//TODO
+	_operacion = operacion;
+	_nombre = nombre;
 }
+
+
 
 Operacion Instruccion::operacion() const {
-	Operacion O;
-	return O;
-
-	//TODO
+	return _operacion;
 }
+
 
 int Instruccion::valor() const {
-	return 0;
-	//TODO
+	return _valor;
 }
 
-Id Instruccion::nombre() const {
-	return " ";
-	//TODO
 
+Id Instruccion::nombre() const {
+	return _nombre;
 }
 

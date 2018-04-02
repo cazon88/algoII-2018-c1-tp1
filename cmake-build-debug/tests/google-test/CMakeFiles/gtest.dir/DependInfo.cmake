@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/power/algoII/tp1/tests/google-test/src/gtest-all.cc" "/home/power/algoII/tp1/cmake-build-debug/tests/google-test/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+  "/Users/jazmin/Desktop/algoII-2018-c1-tp1/tests/google-test/src/gtest-all.cc" "/Users/jazmin/Desktop/algoII-2018-c1-tp1/cmake-build-debug/tests/google-test/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

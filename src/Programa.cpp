@@ -5,31 +5,47 @@
 #include "Programa.h"
 
 Progama::Programa(){
-    //TODO
 }
+
 
 void Programa::agregarInstruccion(Id idRutina, Instruccion instruccion) {
-    //TODO
-}
+    for (i=0; i<instrucciones.size(); i++){  //acá no tengo claros los objetos.
+        idRutina.pushback(instruccion);
+        if (esRutinaExistente(idRutina) == false){
+            rutinas.nombre = idRutina;
+        }
+    }
+
+} //Esto creo que va al revés.
+
 
 bool Programa::esRutinaExistente(Id idRutina) const {
-    return true;
-    //TODO
+    for (i=0; i<rutina.size(); i++){
+        if (rutina[i] == _rutina[i]){
+            existeRutina = true;
+        } else {
+            existeRutina = false;
+        }
+
+    }
+
 }
 
 Instruccion Programa::instruccion(Id idRutina, int i) const {
-    Instruccion i();
-    return i;
-    //TODO
+        if (i>=0 and i<idRutina.size() and esRutinaExistente(idRutina) == true){
+            return idRutina[i];
+        }
+
+
 }
 
-void Programa::agregarInstruccion(Id idRutina, Instruccion instruccion) {
-    //TODO
-}
 
 int Programa::longitud(Id idRutina) const {
-    return 0;
-    //TODO
+    if (esRutinaExistente() == true) {
+        return idRutina.size();
+    }
 }
+
+
 
 
