@@ -195,6 +195,168 @@ gtest/fast:
 	$(MAKE) -f tests/google-test/CMakeFiles/gtest.dir/build.make tests/google-test/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+src/calculadora.o: src/calculadora.cpp.o
+
+.PHONY : src/calculadora.o
+
+# target to build an object file
+src/calculadora.cpp.o:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/src/calculadora.cpp.o
+.PHONY : src/calculadora.cpp.o
+
+src/calculadora.i: src/calculadora.cpp.i
+
+.PHONY : src/calculadora.i
+
+# target to preprocess a source file
+src/calculadora.cpp.i:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/src/calculadora.cpp.i
+.PHONY : src/calculadora.cpp.i
+
+src/calculadora.s: src/calculadora.cpp.s
+
+.PHONY : src/calculadora.s
+
+# target to generate assembly for a file
+src/calculadora.cpp.s:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/src/calculadora.cpp.s
+.PHONY : src/calculadora.cpp.s
+
+src/instruccion.o: src/instruccion.cpp.o
+
+.PHONY : src/instruccion.o
+
+# target to build an object file
+src/instruccion.cpp.o:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/src/instruccion.cpp.o
+.PHONY : src/instruccion.cpp.o
+
+src/instruccion.i: src/instruccion.cpp.i
+
+.PHONY : src/instruccion.i
+
+# target to preprocess a source file
+src/instruccion.cpp.i:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/src/instruccion.cpp.i
+.PHONY : src/instruccion.cpp.i
+
+src/instruccion.s: src/instruccion.cpp.s
+
+.PHONY : src/instruccion.s
+
+# target to generate assembly for a file
+src/instruccion.cpp.s:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/src/instruccion.cpp.s
+.PHONY : src/instruccion.cpp.s
+
+src/programa.o: src/programa.cpp.o
+
+.PHONY : src/programa.o
+
+# target to build an object file
+src/programa.cpp.o:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/src/programa.cpp.o
+.PHONY : src/programa.cpp.o
+
+src/programa.i: src/programa.cpp.i
+
+.PHONY : src/programa.i
+
+# target to preprocess a source file
+src/programa.cpp.i:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/src/programa.cpp.i
+.PHONY : src/programa.cpp.i
+
+src/programa.s: src/programa.cpp.s
+
+.PHONY : src/programa.s
+
+# target to generate assembly for a file
+src/programa.cpp.s:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/src/programa.cpp.s
+.PHONY : src/programa.cpp.s
+
+tests/test_calculadora.o: tests/test_calculadora.cpp.o
+
+.PHONY : tests/test_calculadora.o
+
+# target to build an object file
+tests/test_calculadora.cpp.o:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/tests/test_calculadora.cpp.o
+.PHONY : tests/test_calculadora.cpp.o
+
+tests/test_calculadora.i: tests/test_calculadora.cpp.i
+
+.PHONY : tests/test_calculadora.i
+
+# target to preprocess a source file
+tests/test_calculadora.cpp.i:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/tests/test_calculadora.cpp.i
+.PHONY : tests/test_calculadora.cpp.i
+
+tests/test_calculadora.s: tests/test_calculadora.cpp.s
+
+.PHONY : tests/test_calculadora.s
+
+# target to generate assembly for a file
+tests/test_calculadora.cpp.s:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/tests/test_calculadora.cpp.s
+.PHONY : tests/test_calculadora.cpp.s
+
+tests/test_instruccion.o: tests/test_instruccion.cpp.o
+
+.PHONY : tests/test_instruccion.o
+
+# target to build an object file
+tests/test_instruccion.cpp.o:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/tests/test_instruccion.cpp.o
+.PHONY : tests/test_instruccion.cpp.o
+
+tests/test_instruccion.i: tests/test_instruccion.cpp.i
+
+.PHONY : tests/test_instruccion.i
+
+# target to preprocess a source file
+tests/test_instruccion.cpp.i:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/tests/test_instruccion.cpp.i
+.PHONY : tests/test_instruccion.cpp.i
+
+tests/test_instruccion.s: tests/test_instruccion.cpp.s
+
+.PHONY : tests/test_instruccion.s
+
+# target to generate assembly for a file
+tests/test_instruccion.cpp.s:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/tests/test_instruccion.cpp.s
+.PHONY : tests/test_instruccion.cpp.s
+
+tests/test_programa.o: tests/test_programa.cpp.o
+
+.PHONY : tests/test_programa.o
+
+# target to build an object file
+tests/test_programa.cpp.o:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/tests/test_programa.cpp.o
+.PHONY : tests/test_programa.cpp.o
+
+tests/test_programa.i: tests/test_programa.cpp.i
+
+.PHONY : tests/test_programa.i
+
+# target to preprocess a source file
+tests/test_programa.cpp.i:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/tests/test_programa.cpp.i
+.PHONY : tests/test_programa.cpp.i
+
+tests/test_programa.s: tests/test_programa.cpp.s
+
+.PHONY : tests/test_programa.s
+
+# target to generate assembly for a file
+tests/test_programa.cpp.s:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/tests/test_programa.cpp.s
+.PHONY : tests/test_programa.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,6 +372,24 @@ help:
 	@echo "... correrTests"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... src/calculadora.o"
+	@echo "... src/calculadora.i"
+	@echo "... src/calculadora.s"
+	@echo "... src/instruccion.o"
+	@echo "... src/instruccion.i"
+	@echo "... src/instruccion.s"
+	@echo "... src/programa.o"
+	@echo "... src/programa.i"
+	@echo "... src/programa.s"
+	@echo "... tests/test_calculadora.o"
+	@echo "... tests/test_calculadora.i"
+	@echo "... tests/test_calculadora.s"
+	@echo "... tests/test_instruccion.o"
+	@echo "... tests/test_instruccion.i"
+	@echo "... tests/test_instruccion.s"
+	@echo "... tests/test_programa.o"
+	@echo "... tests/test_programa.i"
+	@echo "... tests/test_programa.s"
 .PHONY : help
 
 

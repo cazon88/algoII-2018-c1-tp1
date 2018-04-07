@@ -23,7 +23,7 @@
 //
 class Instruccion {
 public:
-	     // Precondición: la operación es PUSH
+	// Precondición: la operación es PUSH
 	Instruccion(Operacion operacion, int valor);
 
         // Precondición: la operación es ADD, SUB o MUL
@@ -39,12 +39,10 @@ public:
 
         // Precondición: la operación es READ, WRITE, JUMP o JUMPZ
 	Id nombre() const;
-
 private:
 	Operacion _operacion;
 	int _valor;
 	Id _nombre;
-
 };
 
 #endif /*__INSTRUCCION_H__*/

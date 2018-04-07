@@ -226,11 +226,41 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/power/algoII/tp1/src/Calculadora.h">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="/home/power/algoII/tp1/src/Instruccion.h">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="/home/power/algoII/tp1/src/Programa.h">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="/home/power/algoII/tp1/src/Utiles.h">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="/home/power/algoII/tp1/src/calculadora.cpp">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="/home/power/algoII/tp1/src/instruccion.cpp">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="/home/power/algoII/tp1/src/programa.cpp">
+			<Option target="correrTests"/>
+		</Unit>
 		<Unit filename="/home/power/algoII/tp1/tests/google-test/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
 		<Unit filename="/home/power/algoII/tp1/tests/google-test/src/gtest_main.cc">
 			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="/home/power/algoII/tp1/tests/test_calculadora.cpp">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="/home/power/algoII/tp1/tests/test_instruccion.cpp">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="/home/power/algoII/tp1/tests/test_programa.cpp">
+			<Option target="correrTests"/>
 		</Unit>
 		<Unit filename="/home/power/algoII/tp1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

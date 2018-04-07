@@ -1,11 +1,8 @@
-//
-// Created by power on 30/03/18.
-//
+#ifndef __CALCULADORA_H__
+#define __CALCULADORA_H__
 
-#ifndef SOLUCION_CALCULADORA_H
-#define SOLUCION_CALCULADORA_H
-#include Programa.h
-
+#include "Programa.h"
+#include <stack>
 
 
 class Calculadora {
@@ -22,9 +19,21 @@ int valorVariable(Id idVariable) const;
 
 private:
     Programa _programa;
-    vector<variable> _memoria;
-    stack<int> _pila;
+    std::vector<variable> _memoria;
+    std::stack<int> _pila;
+
+    int indice(Id idVariable) const;
+    int indiceRutina(Id idRtina);
+    int obtenerValor();
+
+    void push(int valor);
+    void add();
+    void sub();
+    void mul();
+
+    void read (Id idVariable);
+    void write (Id idVariable);
 };
 
 
-#endif //SOLUCION_CALCULADORA_H
+#endif /*__CALCULADORA_H__*/
