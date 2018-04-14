@@ -45,10 +45,13 @@ int Calculadora::valorVariable(Id idVariable) const {
     }
 }
 
-void Calculadora::ejecutar(Id idRutina) {
 
-    while(true  /*TODO: Condiciones de terminacion de programa*/){
-        for(int i = 0; i < 0; i++ /*TODO: Iterar instrucciones de la rutina idRutina*/) {
+ void Calculadora::ejecutar(Id idRutina) {
+
+    bool llegoAlFinalDeLaRutina = false;
+
+    if(_programa.esRutinaExistente(idRutina) && !llegoAlFinalDeLaRutina){
+        for(int i = 0; i < _programa.longitud(idRutina); i++) {
             Instruccion instruc = _programa.instruccion(idRutina, i);
             switch (instruc.operacion()) {
                 case PUSH  :
@@ -58,26 +61,34 @@ void Calculadora::ejecutar(Id idRutina) {
                     add();
                     break;
                 case SUB  :
-                    //TODO: Completar como ADD
+                    sub();
                     break;
                 case MUL  :
-                    //TODO: Completar como ADD
+                    mul();
                     break;
                 case READ  :
-                    //TODO: Completar parecido a PUSH
+                    read(instruc.nombre());
                     break;
                 case WRITE  :
-                    //TODO: Completar, parecido a PUSH
+                    write(instruc.nombre());
                     break;
                 case JUMP  :
-                    //TODO: Completar. El JUMP hacerlo directamente aca.
+                    i = _programa.longitud(idRutina); // para cortar la iteracion de instrucciones.
+                    ejecutar(instruc.nombre()); //Ejecuta la nueva rutina
+                    break;
                 case JUMPZ  :
-                    //TODO: Completar parecido a JUMP
+                    if (_pila.empty() || _pila.top() == 0) {
+                        i = _programa.longitud(idRutina); // para cortar la iteracion de instrucciones.
+                        ejecutar(instruc.nombre()); //Ejecuta la nueva rutina
+                    }
                     break;
             }
         }
+
+        llegoAlFinalDeLaRutina = true;
     }
 }
+
 
 /****** Operaciones aritmeticas ******/
 
@@ -111,8 +122,8 @@ void Calculadora::sub(){
 
     if(!_pila.empty()){
         int resta =   obtenerValor();
-        resta += _pila.empty() ? 0 :obtenerValor();
-        _pila.push(resta);
+        resta = ( _pila.empty() ? 0 :obtenerValor() ) - resta;
+        _pila.push(resta );
     }else{
         _pila.push(0);
     }
@@ -163,137 +174,3 @@ void Calculadora::read(Id idVariable){
 
     _pila.push(valor);
 }
-
-/**NIVEL  1 :  + Condiciones de terminacion + Iteracion de instrucciones */
-/*
-  void Calculadora::ejecutar(Id idRutina) {
-
-    bool llegoAlFinalDeLaRutina = false;
-
-    while(_programa.esRutinaExistente(idRutina) && !llegoAlFinalDeLaRutina){
-        for(int i = 0; i < _programa.longitud(idRutina); i++) {
-            Instruccion instruc = _programa.instruccion(idRutina, i);
-            switch (instruc.operacion()) {
-                case PUSH  :
-                    push(instruc.valor());
-                    break;
-                case ADD  :
-                    add();
-                    break;
-                case SUB  :
-                    //TODO: Completar como ADD
-                    break;
-                case MUL  :
-                    //TODO: Completar como ADD
-                    break;
-                case READ  :
-                    //TODO: Completar parecido a PUSH
-                    break;
-                case WRITE  :
-                    //TODO: Completar, parecido a PUSH
-                    break;
-                case JUMP  :
-                    //TODO: Completar. El JUMP hacerlo directamente aca.
-                case JUMPZ  :
-                    //TODO: Completar parecido a JUMP
-                    break;
-            }
-        }
-
-        llegoAlFinalDeLaRutina = true;
-    }
-}
- */
-
-/**NIVEL 2:  + JUMP  */
-/*
-  void Calculadora::ejecutar(Id idRutina) {
-
-    bool llegoAlFinalDeLaRutina = false;
-
-    while(_programa.esRutinaExistente(idRutina) && !llegoAlFinalDeLaRutina){
-        for(int i = 0; i < _programa.longitud(idRutina); i++) {
-            Instruccion instruc = _programa.instruccion(idRutina, i);
-            switch (instruc.operacion()) {
-                case PUSH  :
-                    push(instruc.valor());
-                    break;
-                case ADD  :
-                    add();
-                    break;
-                case SUB  :
-                    //TODO: Completar como ADD
-                    break;
-                case MUL  :
-                    //TODO: Completar como ADD
-                    break;
-                case READ  :
-                    //TODO: Completar parecido a PUSH
-                    break;
-                case WRITE  :
-                    //TODO: Completar, parecido a PUSH
-                    break;
-                case JUMP  :
-                     i = _programa.longitud(idRutina); // para cortar la iteracion de instrucciones.
-                    ejecutar(instruc.nombre()); //Ejecuta la nueva rutina
-                    break;
-                case JUMPZ  :
-                    //TODO: Completar parecido a JUMP
-                    break;
-            }
-        }
-
-        llegoAlFinalDeLaRutina = true;
-    }
-}
- */
-
-
-
-
-
-/**NIVEL 3: COMPLETO**/
-/*
- void Calculadora::ejecutar(Id idRutina) {
-
-    bool llegoAlFinalDeLaRutina = false;
-
-    while(_programa.esRutinaExistente(idRutina) && !llegoAlFinalDeLaRutina){
-        for(int i = 0; i < _programa.longitud(idRutina); i++) {
-            Instruccion instruc = _programa.instruccion(idRutina, i);
-            switch (instruc.operacion()) {
-                case PUSH  :
-                    push(instruc.valor());
-                    break;
-                case ADD  :
-                    add();
-                    break;
-                case SUB  :
-                    sub();
-                    break;
-                case MUL  :
-                    mul();
-                    break;
-                case READ  :
-                    read(instruc.nombre());
-                    break;
-                case WRITE  :
-                    write(instruc.nombre());
-                    break;
-                case JUMP  :
-                    i = _programa.longitud(idRutina); // para cortar la iteracion de instrucciones.
-                    ejecutar(instruc.nombre()); //Ejecuta la nueva rutina
-                    break;
-                case JUMPZ  :
-                    if (_pila.empty() || _pila.top() == 0) {
-                        i = _programa.longitud(idRutina); // para cortar la iteracion de instrucciones.
-                        ejecutar(instruc.nombre()); //Ejecuta la nueva rutina
-                    }
-                    break;
-            }
-        }
-
-        llegoAlFinalDeLaRutina = true;
-    }
-}
- */
